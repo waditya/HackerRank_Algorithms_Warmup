@@ -15,8 +15,10 @@ def timeConversion(s):
             time_string = time_string[2:]
             time_string='00'+ time_string
     else:
-            time_string = time_string[2:]
-            time_string = str((int(hh) + 12))+ time_string
+            if hh != '12':
+                time_string = time_string[2:]
+                time_string = str((int(hh) + 12))+ time_string
+            
     #print(time_string) ##-- Debug 
     return(time_string)
 
